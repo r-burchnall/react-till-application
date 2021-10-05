@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "till-application",
+  "author": "Ross Burchnall <r-burchnall@hotmail.co.uk>",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
