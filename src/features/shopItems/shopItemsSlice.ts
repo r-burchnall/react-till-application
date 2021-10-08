@@ -19,71 +19,71 @@ const initialState: ShopItemsState = {
   items: {
     'Pork': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Chicken': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Beef': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Sliced Ham': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'All-Purpose Flour': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Breakfast Cereal': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Olive Oil': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Butter': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Milk': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Eggs': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Cheese': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Yoghurt': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Onions': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Tomato': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Garlic': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Apples': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Pears': {
       value: 95,
-      stock: 100
+      stock: 10
     },
     'Sweetcorn': {
       value: 105,

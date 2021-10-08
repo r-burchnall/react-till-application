@@ -6,6 +6,7 @@
 }
 
 .items {
+    max-height: calc(100vh - 158px);
     flex-grow: 1;
     overflow-y: scroll;
     height: max-content;

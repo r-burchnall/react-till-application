@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { useAppSelector } from "../app/hooks";
-import { selectItems } from "../features/shopItems/shopItemsSlice";
-import ShopItem from "./shop-item";
-import './shop-items.css';
+import { useAppSelector } from "../../app/hooks";
+import { selectItems } from "../../features/shopItems/shopItemsSlice";
+import ShopItem from "../shop-item/shop-item";
+import './shop-items.scss';
 
 const ShopItems = () => {
     const items = useAppSelector(selectItems);

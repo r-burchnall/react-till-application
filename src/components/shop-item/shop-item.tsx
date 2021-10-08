@@ -1,9 +1,10 @@
 import react from 'react';
 import { Button } from '@mui/material';
-import {ShopItem} from '../features/shopItems/shopItemsSlice';
-import { useAppDispatch } from '../app/hooks';
-import { addToBasket } from '../features/shopItems/basketSlice';
-import './shop-item.css';
+import {ShopItem} from '../../features/shopItems/shopItemsSlice';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { addToBasket } from '../../features/shopItems/basketSlice';
+import './shop-item.scss';
+import Card from '../card';
 
 type Props = {
     name: string;
@@ -12,6 +13,7 @@ type Props = {
 
 const ShopItemComponent = ({item, name}: Props) => {
     const dispatch = useAppDispatch();
+    const requestedStock = useAppSelector(state => state.basket.items[name])
     const AddToBasket = () => {
         dispatch(addToBasket(name))
     }
@@ -24,18 +26,22 @@ const ShopItemComponent = ({item, name}: Props) => {
     }
 
     return (
-        <div className="card">
+        <Card>
             <div className="flex">
                 <div>
                     <div><strong className="item-title">{name}</strong></div>
                     <div>Available: {item.stock}</div>
                 </div>
                 <div className="right">
-                    <Button variant="contained" onClick={AddToBasket}> + </Button>
+                    <Button 
+                    disabled={item.stock <= requestedStock}
+                    sx={{marginBottom: 1}}
+                    variant="contained" 
+                    onClick={AddToBasket}> + </Button>
                     <div>Cost: {SanatiseCurrency(item.value)}</div>
                 </div>
             </div>
-        </div>
+        </Card>
     )
 }
 

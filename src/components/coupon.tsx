@@ -1,14 +1,14 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { applyCoupon } from "../features/shopItems/couponSlice";
+import { applyCoupon, removeCoupon } from "../features/shopItems/couponSlice";
 
 const CouponEntry = () => {
     const dispatch = useAppDispatch();
     const error = useAppSelector((state) => state.coupon.error)
     const activeCoupon = useAppSelector((state) => state.coupon.coupons[state.coupon.activeCoupon])
 
-    let [couponField, setValue] = useState('');
+    let [couponField, setCouponField] = useState('');
 
     const submitOnEnter = (event) => {
         if (event.key === 'Enter') {
@@ -18,7 +18,7 @@ const CouponEntry = () => {
     }
 
     const handleFieldChange = (event) => {
-        setValue(event.target.value);
+        setCouponField(event.target.value);
     }
 
     const submit = () => {
@@ -42,11 +42,32 @@ const CouponEntry = () => {
         }
     }
 
+    const RemoveCouponAction = () => {
+        dispatch(removeCoupon())
+        setCouponField('');
+    }
+
+    const RemoveCouponButton = () => {
+        if (activeCoupon != null) {
+            return (
+                <Button variant={'contained'} onClick={RemoveCouponAction}>Remove Coupon</Button>
+            )
+        }
+    }
+
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'space-between'
+        }}>
             <label>
-                Coupon
-                <input type={'text'}
+                Coupon: 
+                <input 
+                    style={{
+                        marginLeft: 8
+                    }}
+                    type={'text'}
                     value={couponField}
                     onChange={handleFieldChange}
                     placeholder={'Enter your coupon here...'}
@@ -55,6 +76,7 @@ const CouponEntry = () => {
                 {ErrorMessage()}
             </label>
             <Button variant={'contained'} onClick={submit}>Add Coupon</Button>
+            {RemoveCouponButton()}
             {CouponMessage()}
         </div>
     )

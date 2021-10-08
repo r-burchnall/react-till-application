@@ -33,7 +33,7 @@ const BasketTotal = () => {
                 padding: '10px',
                 borderRadius: '8px',
                 boxShadow: '#ccc -3px -3px 6px 0px',
-                width: '100%'
+                width: '48%'
             }
         }>
             <h3>Total: {getTotal()}</h3>

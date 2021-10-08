@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Grid, Typography } from '@mui/material';
-import ShopItems from './components/shop-items';
+import ShopItems from './components/shop-items/shop-items';
 import Basket from './components/basket';
 
 function App() {
