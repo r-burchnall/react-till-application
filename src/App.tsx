@@ -8,7 +8,7 @@ function App() {
   return (
     <Grid container spacing={2} padding-x={10}>
       <Grid className="something" item xs={12}>
-        <Typography align="center" variant="h2">Stupid bread/milk/Eggs till</Typography>  
+        <Typography align="center" variant="h2">React Till Demo</Typography>  
       </Grid>
       <Grid item xs={6}>
         <ShopItems />
