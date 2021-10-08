@@ -1,0 +1,12 @@
+.shop-items {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.items {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: max-content;
+}

@@ -10,17 +10,86 @@ export interface ShopItem {
   stock: number;
 }
 
+/**
+ * Items indexed by name, contains properties for point of sale.
+ * value: an int, price in pence.
+ * stock: an int, quanitity
+ */
 const initialState: ShopItemsState = {
   items: {
-    'bread': {
+    'Pork': {
       value: 95,
       stock: 100
     },
-    'milk': {
+    'Chicken': {
+      value: 95,
+      stock: 100
+    },
+    'Beef': {
+      value: 95,
+      stock: 100
+    },
+    'Sliced Ham': {
+      value: 95,
+      stock: 100
+    },
+    'All-Purpose Flour': {
+      value: 95,
+      stock: 100
+    },
+    'Breakfast Cereal': {
+      value: 95,
+      stock: 100
+    },
+    'Olive Oil': {
+      value: 95,
+      stock: 100
+    },
+    'Butter': {
+      value: 95,
+      stock: 100
+    },
+    'Milk': {
+      value: 95,
+      stock: 100
+    },
+    'Eggs': {
+      value: 95,
+      stock: 100
+    },
+    'Cheese': {
+      value: 95,
+      stock: 100
+    },
+    'Yoghurt': {
+      value: 95,
+      stock: 100
+    },
+    'Onions': {
+      value: 95,
+      stock: 100
+    },
+    'Tomato': {
+      value: 95,
+      stock: 100
+    },
+    'Garlic': {
+      value: 95,
+      stock: 100
+    },
+    'Apples': {
+      value: 95,
+      stock: 100
+    },
+    'Pears': {
+      value: 95,
+      stock: 100
+    },
+    'Sweetcorn': {
       value: 105,
       stock: 5
     },
-    'eggs': {
+    'Honey': {
       value: 75,
       stock: 10
     }

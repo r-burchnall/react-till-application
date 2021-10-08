@@ -26,6 +26,13 @@
   color: rgb(112, 76, 182);
 }
 
+.something {
+  background-color: rgb(107, 139, 243);
+  padding: 5px;
+  color: white;
+  box-shadow: #ccc 3px 3px 6px 0px;
+}
+
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
